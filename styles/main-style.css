@@ -1,0 +1,88 @@
+/*////////////////////////*/
+/* FONT-FACE INTEGRATION */
+/*///////////////////////*/
+
+@font-face {
+  font-family: 'FuturaHandwritten';
+  src: url('fonts/FuturaHandwritten.ttf');
+}
+
+/*////////////////////////*/
+/*       HTML, BODY      */
+/*///////////////////////*/
+
+html, body{
+  width: 100%;
+  height: 100%;
+	margin:0;
+  padding: 0;
+	overflow: hidden;
+	background: #fff;
+	font-family: 'FuturaHandwritten';
+	font-size: 30px;
+  display: table;
+}
+
+/*////////////////////////*/
+/*         SKETCH         */
+/*////////////////////////*/
+
+canvas {
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:1;
+}
+
+#sketch-holder {
+  display: table-cell;
+  vertical-align: middle;
+  position: relative;
+  z-index: 2;
+}
+
+/*////////////////////////*/
+/*         FOOTER        */
+/*///////////////////////*/
+
+#footer{
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 50px;
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+#footer a{
+  font-size: 20px;
+  color: white;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 50px;
+  text-decoration: none;
+  transition: 1s;
+  word-spacing: 150px;
+}
+
+#footer a:hover{
+  color: rgb(127,127,127);
+  transition: 1s;
+  cursor: pointer;
+}
+
+/*////////////////////////*/
+/*      MEDIA QUERIES     */
+/*///////////////////////*/
+
+@media only screen and (max-width: 650px) {
+  #main h1{
+    font-size: 50px;
+  }
+  #footer a{
+    font-size: 15px;
+    word-spacing: 30px;
+  }
+}

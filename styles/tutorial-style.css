@@ -1,0 +1,67 @@
+/*////////////////////////*/
+/*        TUTORIAL        */
+/*////////////////////////*/
+
+#tutorial, #arduino, #breadboard, #resistor, #leds, #temperature, #end{
+  text-align: center;
+  opacity: 0;
+  display: none;
+}
+
+/*////////////////////////*/
+/*         IMAGES         */
+/*////////////////////////*/
+
+.tutorial-img-size{
+  width: 40%;
+  height: 40%;
+}
+
+/*////////////////////////*/
+/*         ARROWS         */
+/*////////////////////////*/
+
+#rarrow, #larrow{
+  width: 10%;
+  height: 10%;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+/*////////////////////////*/
+/*        PARAGRAPH       */
+/*////////////////////////*/
+
+.tutorial-paragraph{
+  margin-left: 70px;
+  margin-right: 70px;
+}
+
+/*////////////////////////*/
+/*         MARGINS        */
+/*////////////////////////*/
+
+#ardu, #bread, #resist{
+  margin-top: -110px;
+  margin-bottom: -130px;
+}
+
+#led{
+  margin-top: -110px;
+  margin-bottom: -60px;
+}
+
+#temp{
+  margin-top: -50px;
+  margin-bottom: -40px;
+}
+
+/*////////////////////////*/
+/*       END BUTTON       */
+/*////////////////////////*/
+
+#end button{
+  font-size: 20px;
+  padding: 12px 12px;
+  margin: 16px 20px;
+}
