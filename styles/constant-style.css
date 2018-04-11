@@ -9,8 +9,8 @@ h2{
 p{
   font-size: 30px;
   color: rgb(120, 120, 120);
-  margin-left: 50px;
-  margin-right: 50px;
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 /*////////////////////////*/
@@ -24,7 +24,7 @@ img{
 }
 
 img:hover{
-  filter: brightness(50%);
+  filter: brightness(95%);
   transition: 1s;
   animation: shake 1s;
   animation-iteration-count: infinite;

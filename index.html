@@ -48,28 +48,122 @@
 
       <div id='intro'>
         <h2> Hello! </h2>
-        <p> Welcome to first amazing <span style='color:rgb(179,0,0);'>Karkhana's Innovator Club</span> tutorial.</p>
-        <p>Here, you will be able to navigate stories where you will be presented with challenges. Your task will be to create inventions to win car races, detect zombies, and defeat momosaurs.</p>
-        <p> Are you <span style='color:rgb(179,0,0);'>ready?</span></p>
+        <p> Welcome to the amazing <span style='color:rgb(179,0,0);'>Karkhana's Innovator Club</span> tutorial. </p>
+        <p> You will be able to navigate stories that will present you with challenges. Your task will be to create inventions to win car races, detect zombies, and defeat momosaurs. </p>
+        <p> Are you <span style='color:rgb(179,0,0);'>ready</span> for an adventure? </p>
         <section>
-          <button class='thin' onclick='slideFunction("intro", "adventure")'> <span style='font-weight:bold'>yes</span>, of course! </button>
-          <button class='thin' onclick='slideFunction("intro", "goodbye")'> <span style='font-weight:bold'>no</span>, right now </button>
+          <button class='thin' onclick='slideFunction("intro", "tutorial");'> <span style='font-weight:bold'>yes</span>, of course!!! </button>
         </section>
       </div>
+
+      <!-- //////////////// -->
+      <!--     TUTORIAL     -->
+      <!-- //////////////// -->
+
+      <div id='tutorial'>
+        <h2> Welcome to the Tutorial </h2>
+        <p> Here, we will tell you about the most <span style='color:rgb(144, 12, 63);'>important</span> materials in your kit! </p>
+        <p> Make sure to read all the <span style='color:rgb(144, 12, 63);'>descriptions</span> carefully and hover over the characters to see what they have to say! </p>
+        <section>
+          <button class='thin' onclick='slideFunction("tutorial", "arduino")'> go to tutorial </button>
+          <button class='thin' onclick='slideFunction("tutorial", "adventure")'> skip tutorial </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--      ARDUINO     -->
+      <!-- //////////////// -->
+
+      <div id='arduino'>
+        <h2> This is an <span style='color:rgb(0, 102, 102);'>arduino</span>:</h2>
+        <img class='tutorial-img-size' id='ardu' src='images/Ardu.png' onmouseover='bubble(this, "ardu");' onmouseout='bubble(this, "ardu-1")'>
+        <p class='tutorial-paragraph'> It acts as the brain of the entire system. You can program its behavior with <span style='color:rgb(0,102,102);'>code</span>. It can then tell the rest of the components what to do. </p>
+        <section>
+          <img onclick='slideFunction("arduino", "tutorial")' id='larrow' src='images/left-arrow.png'>
+          <img onclick='slideFunction("arduino", "breadboard")' id='rarrow' src='images/right-arrow.png'>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--    BREADBOARD    -->
+      <!-- //////////////// -->
+
+      <div id='breadboard'>
+        <h2> This is a <span style='color:rgb(230, 172, 0);'>breadboard</span>:</h2>
+        <img class='tutorial-img-size' id='bread' src='images/Bread.png' onmouseover='bubble(this, "bread");' onmouseout='bubble(this, "bread-1");'>
+        <p class='tutorial-paragraph'> It is the <span style='color:rgb(230, 172, 0);'>connecting</span> material between your arduino and your components. It is strong and able to conduct electric current. </p>
+        <section>
+          <img onclick='slideFunction("breadboard", "arduino")' id='larrow' src='images/left-arrow.png'>
+          <img onclick='slideFunction("breadboard", "resistor")' id='rarrow' src='images/right-arrow.png'>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--     RESISTOR     -->
+      <!-- //////////////// -->
+
+      <div id='resistor'>
+        <h2> This is a <span style='color:rgb(137, 80, 40);'>resistor</span>:</h2>
+        <img class='tutorial-img-size' id='resist' src='images/Resist.png' onmouseover='bubble(this, "resist");' onmouseout='bubble(this, "resist-1")'>
+        <p class='tutorial-paragraph'> It is the protector of the circuit. It can <span style='color:rgb(137, 80, 40);'>limit</span> the amount of electricity going from one component to the other. </p>
+        <section>
+          <img onclick='slideFunction("resistor", "breadboard")' id='larrow' src='images/left-arrow.png'>
+          <img onclick='slideFunction("resistor", "leds")' id='rarrow' src='images/right-arrow.png'>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--       LEDS       -->
+      <!-- //////////////// -->
+
+      <div id='leds'>
+        <h2> This are colorful <span style='color:rgb(74, 136, 186);'>leds</span>:</h2>
+        <img class='tutorial-img-size' id='led' src='images/Leds.png' onmouseover='bubble(this, "led");' onmouseout='bubble(this, "led-1")'>
+        <p class='tutorial-paragraph'> They bring <span style='color:rgb(74, 136, 186);'>light</span> to life. They can light up or down the way we want! </p>
+        <section>
+          <img onclick='slideFunction("leds", "resistor")' id='larrow' src='images/left-arrow.png'>
+          <img onclick='slideFunction("leds", "temperature")' id='rarrow' src='images/right-arrow.png'>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--    TEMPERATURE   -->
+      <!-- //////////////// -->
+
+      <div id='temperature'>
+        <h2> This is a <span style='color:rgb(206, 53, 39);'>temperature</span> sensor:</h2>
+        <img class='tutorial-img-size' id='temp' src='images/Temp.png' onmouseover='bubble(this, "temp");' onmouseout='bubble(this, "temp-1")'>
+        <p class='tutorial-paragraph'> It can <span style='color:rgb(206, 53, 39);'>detect</span> the coldest and the hightest temperatures in the world. </p>
+        <section>
+          <img onclick='slideFunction("temperature", "leds")' id='larrow' src='images/left-arrow.png'>
+          <img onclick='slideFunction("temperature", "end")' id='rarrow' src='images/right-arrow.png'>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--   END TUTORIAL   -->
+      <!-- //////////////// -->
+
+      <div id='end'>
+        <h2> Congratulations! Now you know what your kit components do! </h2>
+        <p> Are you ready for an <span style='color:rgb(120, 80, 40);'>adventure</span>???</p>
+        <section>
+          <button onclick='slideFunction("end", "adventure")' class='thin'> yes yes :) </button>
+          <button onclick='slideFunction("end", "tutorial")' class='thin'> not yet :( </button>
+        </section>
+      </div>
+
 
       <!-- //////////////// -->
       <!--     ADVENTURE    -->
       <!-- //////////////// -->
 
       <div id='adventure'>
-        <h2> Choose your <span style='color:rgb(121,186,71);'>adventure</span>:</h2>
+        <h2> Choose your <span style='color:rgb(104,150,28);'>adventure</span>:</h2>
         <section>
           <button onclick='slideFunction("adventure", "unavailable")' class='thin'> 1. the traffic jam </button>
           <button onclick='slideFunction("adventure", "unavailable")' class='thin'> 2. the zombie attack </button>
           <button onclick='slideFunction("adventure", "unavailable")' class='thin'> 3. the momosaur invasion </button>
-      </section>
-      <section>
-          <p> or would you like a <button onclick='slideFunction("adventure", "tutorial")' class='dashed'> short tutorial </button> first? </p>
       </section>
       </div>
 
@@ -85,103 +179,6 @@
             <img onclick='slideFunction("character", "")' id='momo' src='images/Momo.png'>
           </div>
         </div>
-      </div>
-
-      <!-- //////////////// -->
-      <!--     TUTORIAL     -->
-      <!-- //////////////// -->
-
-      <div id='tutorial'>
-        <h2> Tutorial </h2>
-        <p> We are about to tell you about the most <span style='color:rgb(144, 12, 63);'>important</span> materials in your kit! <br><br>
-           Make sure to read the <span style='color:rgb(144, 12, 63);'>descriptions</span> and click on the characters to see what they have to say! </p>
-        <section>
-          <img onclick='slideFunction("tutorial", "arduino")' id='rarrow' src='images/right-arrow.png'>
-        </section>
-        <br>
-      </div>
-
-      <!-- //////////////// -->
-      <!--      ARDUINO     -->
-      <!-- //////////////// -->
-
-      <div id='arduino'>
-        <h2> This is an <span style='color:rgb(0, 102, 102);'>arduino</span>:</h2>
-        <img class='tutorial-img-size' id='ardu' src='images/Ardu.png' onclick='bubble(this, "ardu");'>
-        <p class='tutorial-paragraph'> It acts as the brain of the entire system. With <span style='color:rgb(0,102,102);'>code</span> you can program its behavior. Then it can tell the rest of the components what to do! </p>
-        <section>
-          <img onclick='slideFunction("arduino", "tutorial")' id='larrow' src='images/left-arrow.png'>
-          <img onclick='slideFunction("arduino", "breadboard")' id='rarrow' src='images/right-arrow.png'>
-        </section>
-      </div>
-
-      <!-- //////////////// -->
-      <!--    BREADBOARD    -->
-      <!-- //////////////// -->
-
-      <div id='breadboard'>
-        <h2> This is a <span style='color:rgb(230, 172, 0);'>breadboard</span>:</h2>
-        <img class='tutorial-img-size' id='bread' src='images/Bread.png' onclick='bubble(this, "bread");'>
-        <p class='tutorial-paragraph'> It is the <span style='color:rgb(230, 172, 0);'>connecting</span> material between your arduino and your components. It is strong and able to conduct electric current! </p>
-        <section>
-          <img onclick='slideFunction("breadboard", "arduino")' id='larrow' src='images/left-arrow.png'>
-          <img onclick='slideFunction("breadboard", "resistor")' id='rarrow' src='images/right-arrow.png'>
-        </section>
-      </div>
-
-      <!-- //////////////// -->
-      <!--     RESISTOR     -->
-      <!-- //////////////// -->
-
-      <div id='resistor'>
-        <h2> This is a <span style='color:rgb(137, 80, 40);'>resistor</span>:</h2>
-        <img class='tutorial-img-size' id='resist' src='images/Resist.png' onclick='bubble(this, "resist");'>
-        <p class='tutorial-paragraph'> This is what <span style='color:rgb(137, 80, 40);'>limits</span> the amount of electricity going from one component to the other. It protects your circuit! </p>
-        <section>
-          <img onclick='slideFunction("resistor", "breadboard")' id='larrow' src='images/left-arrow.png'>
-          <img onclick='slideFunction("resistor", "leds")' id='rarrow' src='images/right-arrow.png'>
-        </section>
-      </div>
-
-      <!-- //////////////// -->
-      <!--       LEDS       -->
-      <!-- //////////////// -->
-
-      <div id='leds'>
-        <h2> This are colorful <span style='color:rgb(40, 80, 132);'>leds</span>:</h2>
-        <img class='tutorial-img-size' id='led' src='images/Leds.png' onclick='bubble(this, "led");'>
-        <p class='tutorial-paragraph'> They bring <span style='color:rgb(40, 80, 132);'>light</span> to life! And there are many many colors. </p>
-        <section>
-          <img onclick='slideFunction("leds", "resistor")' id='larrow' src='images/left-arrow.png'>
-          <img onclick='slideFunction("leds", "temperature")' id='rarrow' src='images/right-arrow.png'>
-        </section>
-      </div>
-
-      <!-- //////////////// -->
-      <!--    TEMPERATURE   -->
-      <!-- //////////////// -->
-
-      <div id='temperature'>
-        <h2> This is a <span style='color:rgb(10, 10, 10);'>temperature</span> sensor:</h2>
-        <img class='tutorial-img-size' id='temp' src='images/Temp.png' onclick='bubble(this, "temp");'>
-        <p class='tutorial-paragraph'> It can <span style='color:rgb(40, 80, 132);'>detect</span> the coldest and the hightest temperatures in the world! </p>
-        <section>
-          <img onclick='slideFunction("temperature", "leds")' id='larrow' src='images/left-arrow.png'>
-          <img onclick='slideFunction("temperature", "end")' id='rarrow' src='images/right-arrow.png'>
-        </section>
-      </div>
-
-      <!-- //////////////// -->
-      <!--   END TUTORIAL   -->
-      <!-- //////////////// -->
-
-      <div id='end'>
-        <h2> Congratulations! Now you know what your kit components do! </h2>
-        <p> Are you ready for a <span style='color:rgb(120, 80, 40);'>adventure</span>???</p>
-        <section>
-          <button onclick='slideFunction("end", "adventure")' class='thin'> yes :) </button>
-          <button onclick='slideFunction("end", "goodbye")' class='thin'> no :( </button>
-        </section>
       </div>
 
       <!-- //////////////// -->
@@ -212,6 +209,7 @@
         <a href=''> ABOUT </a>
         <a href=''> CONTACT </a>
         <a onclick='togglePlay()'> ON/OFF </a>
+        <!-- add icon instead of on/off -->
       </div>
 
     </div>

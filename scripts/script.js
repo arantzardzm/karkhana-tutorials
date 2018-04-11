@@ -24,10 +24,35 @@ function slideFunction(first, second){
 /*////////////////////////*/
 
 function bubble(element, item) {
+
   if (item == 'ardu'){
-    element.setAttribute('src', 'images/Ardu_bubble.png');
-  } else if (item == 'bread'){
-    element.setAttribute('src', 'images/Bread_bubble.png');
+    element.setAttribute('src', 'images/Bubble_Ardu.png');
+  } else if (item == 'ardu-1'){
+    element.setAttribute('src', 'images/Ardu.png');
+  }
+
+  else if (item == 'bread'){
+    element.setAttribute('src', 'images/Bubble_Bread.png');
+  } else if (item == 'bread-1'){
+    element.setAttribute('src', 'images/Bread.png');
+  }
+
+  else if (item == 'resist'){
+    element.setAttribute('src', 'images/Bubble_Resist.png');
+  } else if (item == 'resist-1'){
+    element.setAttribute('src', 'images/Resist.png');
+  }
+
+  else if (item == 'led'){
+    element.setAttribute('src', 'images/Bubble_Leds.png');
+  } else if (item == 'led-1'){
+    element.setAttribute('src', 'images/Leds.png');
+  }
+
+  else if (item == 'temp'){
+    element.setAttribute('src', 'images/Bubble_Temp.png');
+  } else if (item == 'temp-1'){
+    element.setAttribute('src',  'images/Temp.png');
   }
 }
 
