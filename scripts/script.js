@@ -19,6 +19,15 @@ function slideFunction(first, second){
   }, 1000);
 }
 
+function slideFunctionIn(item){
+  document.getElementById(item).style.display = 'block';
+
+  setTimeout(function appear(){
+    document.getElementById(item).style.opacity = '.88';
+    document.getElementById(item).style.transition = '.8s';
+  }, 300);
+}
+
 /*////////////////////////*/
 /*       IMAGE BUBBLE     */
 /*////////////////////////*/
@@ -63,16 +72,18 @@ function bubble(element, item) {
 var myAudio = document.getElementById("myAudio");
 var isPlaying = true;
 
-function togglePlay() {
+function togglePlay(){
   if (isPlaying) {
-    myAudio.pause()
+    myAudio.pause();
   } else {
     myAudio.play();
   }
 };
-myAudio.onplaying = function() {
+myAudio.onplaying = function(){
   isPlaying = true;
+  document.getElementById('soundw').innerHTML = 'SOUND:ON';
 };
-myAudio.onpause = function() {
+myAudio.onpause = function(){
   isPlaying = false;
+  document.getElementById('soundw').innerHTML = 'SOUND:OFF';
 };

@@ -43,6 +43,33 @@
       </div>
 
       <!-- //////////////// -->
+      <!--       ABOUT      -->
+      <!-- //////////////// -->
+
+      <div id='about'>
+        <h1> About </h1>
+        <p> a tutorial created for karkhana </p>
+        <section>
+          <button class='thin' onclick='slideFunction("about", "this")'> close </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--      CONTACT     -->
+      <!-- //////////////// -->
+
+      <div id='contact'>
+        <h1> Contact </h1>
+        <h6> <span style='color:rgb(153, 51, 255);'> New York University Abu Dhabi </span> <br> <span style='color:rgb(230, 184, 0)'> Saadiyat Island, Abu Dhabi, UAE </span> </h6>
+        <p> <span style='color:rgb(230, 115, 0);'> Arantza Rodriguez </span> </p>
+        <p> <span style='color:rgb(0, 153, 204);'> Mateo Juvera </span> </p>
+        <p> <span style='color:rgb(102, 153, 0);'> Laine Melkerte </span> </p>
+        <section>
+          <button class='thin' onclick='slideFunction("contact", "this")'> close </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
       <!--   INTRODUCTION   -->
       <!-- //////////////// -->
 
@@ -206,10 +233,9 @@
 
       <div id='footer'>
         <a href=''> MENU </a>
-        <a href=''> ABOUT </a>
-        <a href=''> CONTACT </a>
-        <a onclick='togglePlay()'> ON/OFF </a>
-        <!-- add icon instead of on/off -->
+        <a onclick='slideFunctionIn("about")'> ABOUT </a>
+        <a onclick='slideFunctionIn("contact")'> CONTACT </a>
+        <a onclick='togglePlay()' id='soundw'>SOUND:ON</a>
       </div>
 
     </div>
