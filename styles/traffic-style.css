@@ -2,7 +2,7 @@
 /*   TRANSITION DISPLAY   */
 /*////////////////////////*/
 
-#first, #goodbye{
+#first, #second, #third, #fourth, #fifth, #sixth, #conclusion, #character{
   text-align: center;
   opacity: 0;
   display: none;
@@ -29,19 +29,34 @@
 
 #imgcont{
   margin-top: -40px;
-  margin-left: 32.5%;
   margin-bottom: -30px;
   text-align: center;
 }
 
-#image1{
-  width: 50%;
+/*////////////////////////*/
+/*          FIRST         */
+/*////////////////////////*/
+
+#first button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
 }
 
 /*////////////////////////*/
-/*         GOODBYE        */
+/*          SECOND        */
 /*////////////////////////*/
 
-#goodbye{
-  margin-top: -70px;
+/* #second h2{
+  margin-top: -250px;
+} */
+
+/* #c2{
+  transform: translateY(50%);
+} */
+
+#second button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
 }

@@ -29,6 +29,7 @@
     <!-- //////////////// -->
 
     <div id='sketch-holder'>
+      <div id='car-sketch'></div>
 
       <!-- //////////////// -->
       <!--   TRAFFIC MAIN   -->
@@ -37,7 +38,7 @@
       <div id='traffic-main'>
         <h1> The Traffic Jam </h1>
         <section>
-          <img onclick='slideFunction("traffic-main", "first")' id='rarrow' src='images/right-arrow.png'>
+          <img onclick='slideFunction("traffic-main", "first"); removeSketch();' id='rarrow' src='images/right-arrow.png'>
         </section>
       </div>
 
@@ -46,14 +47,94 @@
       <!-- //////////////// -->
 
       <div id='first'>
-        <p> <span style='color:rgb(201,125,138);'>Momou</span> was riding his motorbike to Karkhana yesterday to a very important meeting when he suddenly reached a crossroad with no policeman guiding the traffic.</p>
+        <p> <span style='color:rgb(201,125,138);'>Momou</span> was riding his car to Karkhana yesterday to a very important meeting when he suddenly reached a crossroad with no policeman guiding the traffic.</p>
         <p>It turns out the policeman had gotten flu and the whole area had become one big traffic jam! </p>
         <p> What can you do to end the traffic and help <span style='color:rgb(201,125,138);'>Momou</span> reach Karkhana on time? </p>
         <section>
-          <button class='thin' onclick='slideFunction("about", "this")'> close </button>
+          <button class='thin' onclick='slideFunction("first", "character");'> help Momou! </button>
         </section>
       </div>
 
+
+      <!-- //////////////// -->
+      <!--    CHARACTER     -->
+      <!-- //////////////// -->
+
+      <div id='character'>
+        <div id='imgcont'>
+          <img onclick='slideFunction("character", "second");' class='tutorial-img-size' id='momo' src='images/momo.png' onmouseover='bubble(this, "momo");' onmouseout='bubble(this, "momo-1")'>
+        </div>
+      </div>
+
+      <!-- //////////////// -->
+      <!--      SECOND      -->
+      <!-- //////////////// -->
+
+      <div id='second'>
+        <p> select the materials you need! </p>
+        <div id="c2"> </div>
+        <section>
+          <button class='thin' onclick='slideFunction("second", "third");'> ready? </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--       THIRD      -->
+      <!-- //////////////// -->
+
+      <div id='third'>
+        <p> Connect the arduino to the breadboard using cables </p>
+        <p> </p>
+        <section>
+          <button class='thin' onclick='slideFunction("third", "fourth");'> next </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--      FOURTH      -->
+      <!-- //////////////// -->
+
+      <div id='fourth'>
+        <p> connect leds to breadboard and arduino using cables </p>
+        <p> </p>
+        <section>
+          <button class='thin' onclick='slideFunction("fourth", "fifth");'> next </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--      FIFTH      -->
+      <!-- //////////////// -->
+
+      <div id='fifth'>
+        <p> add resitors to circuit </p>
+        <p> </p>
+        <section>
+          <button class='thin' onclick='slideFunction("fifth", "sixth");'> next </button>
+        </section>
+      </div>
+
+
+      <!-- //////////////// -->
+      <!--       SIXTH      -->
+      <!-- //////////////// -->
+
+      <div id='sixth'>
+        <p> write code and connect to laptop</p>
+        <p> </p>
+        <section>
+          <button class='thin' onclick='slideFunction("sixth", "conclusion");'> next </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--    CONCLUSION    -->
+      <!-- //////////////// -->
+
+      <div id='conclusion'>
+        <p> CONTRATULATIONS! </p>
+        <p> </p>
+      </div>
 
       <!-- //////////////// -->
       <!--       ABOUT      -->
@@ -83,19 +164,11 @@
       </div>
 
       <!-- //////////////// -->
-      <!--      GOODBYE     -->
-      <!-- //////////////// -->
-
-      <div id='goodbye'>
-        <p> Goodbye! We hope to see you soon! </p>
-      </div>
-
-      <!-- //////////////// -->
       <!--      FOOTER      -->
       <!-- //////////////// -->
 
       <div id='footer'>
-        <a href=''> MENU </a>
+        <a href='index.html'> MENU </a>
         <a onclick='slideFunctionIn("about")'> ABOUT </a>
         <a onclick='slideFunctionIn("contact")'> CONTACT </a>
         <a onclick='togglePlay()' id='soundw'>SOUND:ON</a>
@@ -103,10 +176,13 @@
 
     </div>
 
-    <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/p5.js"></script>
+    <script src="scripts/lib/p5.js"></script>
+    <script src="scripts/lib/p5.min.js"></script>
+    <script src="scripts/lib/p5.play.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
-    <script src="scripts/sketch.js"></script>
     <script src='scripts/script.js'></script>
+    <script src='scripts/traffic.js'></script>
+    <script src='scripts/materials.js'></script>
 
   </body>
 
