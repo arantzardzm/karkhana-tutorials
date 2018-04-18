@@ -8,6 +8,19 @@
   display: none;
 }
 
+#ready-button {
+  opacity: 0;
+}
+
+#ready-button-1{
+  display: none;
+  opacity: 0;
+}
+
+#ready-button-2{
+  opacity: 0;
+}
+
 /*////////////////////////*/
 /*      TRAFFIC MAIN      */
 /*////////////////////////*/
@@ -18,44 +31,185 @@
 }
 
 /*////////////////////////*/
-/*        CHARACTER       */
-/*////////////////////////*/
-
-#momo{
-  width: 100%;
-  height: 30%;
-  margin-top: -20px;
-}
-
-#imgcont{
-  margin-top: -40px;
-  margin-bottom: -30px;
-  text-align: center;
-}
-
-/*////////////////////////*/
 /*          FIRST         */
 /*////////////////////////*/
+
+#first{
+  margin-top: -100px;
+}
 
 #first button{
   font-size: 16px;
   padding: 12px 12px;
   margin: 12px 16px;
+  margin-top: -5px;
+}
+
+#first p{
+  font-size: 23px;
 }
 
 /*////////////////////////*/
 /*          SECOND        */
 /*////////////////////////*/
 
-/* #second h2{
-  margin-top: -250px;
-} */
-
-/* #c2{
-  transform: translateY(50%);
-} */
-
 #second button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 12px;
+}
+
+#second img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  animation: none !important;
+}
+
+#second p{
+  margin-top: -20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/*////////////////////////*/
+/*          THIRD         */
+/*////////////////////////*/
+
+#third{
+  margin-top: -50px;
+}
+
+#third h2{
+  margin-top: 20px;
+  font-size: 30px;
+}
+
+#third p {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+#third #ardu-explanation, #third #bread-explanation{
+  width: 300px;
+  height: 300px;
+  margin-top: 60px;
+  margin-left: -140px;
+  margin-right: -180px;
+  animation: none !important;
+}
+
+#third #momo{
+  width: 250px;
+  height: 250px;
+  position: fixed;
+  bottom: 40;
+  right: 0;
+}
+
+#third #red_drag, #third #black_drag{
+  width: 300px;
+  height: 200px;
+  animation: none !important;
+}
+
+#third #red_drag{
+  margin-top: 60px;
+  transform: rotate(5deg);
+}
+
+#third #black_drag{
+  margin-top: -50px;
+}
+
+#red_div, #black_div{
+  width: 300px;
+  height: 200px;
+  margin-left: 25px;
+  margin-right: 25px;
+  border: 0.5px dashed rgb(100,100,100);
+}
+
+#red_div_1, #black_div_1{
+  width: 300px;
+  height: 100px;
+  margin: auto;
+}
+
+#red_div_1{
+  position: fixed;
+  top: 150;
+  left: 0;
+}
+
+#black_div_1{
+  position: fixed;
+  top: 350;
+  left: 0;
+}
+
+#third button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+  margin-top: -650px;
+  z-index: 5;
+}
+
+/*////////////////////////*/
+/*         FOURTH         */
+/*////////////////////////*/
+
+#fourth h2{
+  margin-top: 60px;
+  font-size: 30px;
+}
+
+#fourth p {
+  font-size: 20px;
+  margin-top: -10px;
+}
+
+#fourth img{
+  width: 200px;
+  height: 200px;
+  animation: none !important;
+}
+
+#fourth #green_drag, #fourth #leds_drag, #fourth #blacks_drag{
+  width: 150px;
+  height: 150px;
+}
+
+#fourth #green_drag{
+  transform: rotate(-40deg);
+  margin-left: -95px;
+}
+
+#fourth #blacks_drag{
+  transform: rotate(60deg);
+  margin-left: 70px;
+}
+
+#fourth #ardu-fourth, #fourth #bread-fourth{
+  margin-left: -40px;
+  margin-right: -60px;
+}
+
+#fourth #red-fourth{
+  margin-top: -30px;
+}
+
+#fourth #green_div, #fourth #leds_div, #fourth #blacks_div{
+  width: 150px;
+  height: 150px;
+  margin-top: -95px;
+  margin-left: 2px;
+  margin-right: 2px;
+  border: .5px dashed grey;
+}
+
+#fourth button{
   font-size: 16px;
   padding: 12px 12px;
   margin: 12px 16px;

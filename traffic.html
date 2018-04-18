@@ -29,7 +29,6 @@
     <!-- //////////////// -->
 
     <div id='sketch-holder'>
-      <div id='car-sketch'></div>
 
       <!-- //////////////// -->
       <!--   TRAFFIC MAIN   -->
@@ -38,7 +37,7 @@
       <div id='traffic-main'>
         <h1> The Traffic Jam </h1>
         <section>
-          <img onclick='slideFunction("traffic-main", "first"); removeSketch();' id='rarrow' src='images/right-arrow.png'>
+          <img onclick='slideFunction("traffic-main", "first");' id='rarrow' src='images/right-arrow.png'>
         </section>
       </div>
 
@@ -49,21 +48,10 @@
       <div id='first'>
         <p> <span style='color:rgb(201,125,138);'>Momou</span> was riding his car to Karkhana yesterday to a very important meeting when he suddenly reached a crossroad with no policeman guiding the traffic.</p>
         <p>It turns out the policeman had gotten flu and the whole area had become one big traffic jam! </p>
-        <p> What can you do to end the traffic and help <span style='color:rgb(201,125,138);'>Momou</span> reach Karkhana on time? </p>
+        <p> Will you help end the traffic so <span style='color:rgb(201,125,138);'>Momou</span> can reach Karkhana on time? </p>
         <section>
-          <button class='thin' onclick='slideFunction("first", "character");'> help Momou! </button>
+          <button class='thin' onclick='slideFunction("first", "second"); removeSketch();'> help! </button>
         </section>
-      </div>
-
-
-      <!-- //////////////// -->
-      <!--    CHARACTER     -->
-      <!-- //////////////// -->
-
-      <div id='character'>
-        <div id='imgcont'>
-          <img onclick='slideFunction("character", "second");' class='tutorial-img-size' id='momo' src='images/momo.png' onmouseover='bubble(this, "momo");' onmouseout='bubble(this, "momo-1")'>
-        </div>
       </div>
 
       <!-- //////////////// -->
@@ -71,10 +59,22 @@
       <!-- //////////////// -->
 
       <div id='second'>
-        <p> select the materials you need! </p>
-        <div id="c2"> </div>
+        <h3> 1. Select the materials you will need! </h3>
+        <p id='score'> Score: 0 <p>
         <section>
-          <button class='thin' onclick='slideFunction("second", "third");'> ready? </button>
+          <button id='ardu-button' class='thin' onclick='checkMaterial("yes", "ardu-button");'><img src='images/Ardu.png'></button>
+          <button id='temp-button' class='thin' onclick='checkMaterial("no", "temp-button");'><img src='images/Temp.png'></button>
+          <button id='resist-button' class='thin' onclick='checkMaterial("yes", "resist-button");'><img src='images/Resist.png'></button>
+          <button id='wires-button' class='thin' onclick='checkMaterial("yes", "wires-button");'><img src='images/Red_Wire.png'></button>
+        </section>
+        <section>
+          <button id='apple-button' class='thin' onclick='checkMaterial("no", "apple-button");'><img src=''></button>
+          <button id='leds-button' class='thin' onclick='checkMaterial("yes", "leds-button");'><img src='images/Leds.png'></button>
+          <button id='bread-button' class='thin' onclick='checkMaterial("yes", "bread-button");'><img src='images/Bread.png'></button>
+          <button id='puppy-button' class='thin' onclick='checkMaterial("no", "puppy-button");'><img src=''></button>
+        </section>
+        <section>
+          <button id='ready-button' class='thin' onclick='slideFunction("second", "third");'> all needed materials are collected! </button>
         </section>
       </div>
 
@@ -83,10 +83,30 @@
       <!-- //////////////// -->
 
       <div id='third'>
-        <p> Connect the arduino to the breadboard using cables </p>
-        <p> </p>
+        <h2> 2. Connect the Arduino to the Breadboard by dragging and dropping the cables </h2>
         <section>
-          <button class='thin' onclick='slideFunction("third", "fourth");'> next </button>
+          <p> Make sure <span style='color:rgb(207, 45, 5)'> 5V </span> is connected to <span style='color:rgb(207, 45, 5)'> + </span> with the red wire and <span style='color:black'> GND </span> is connected to <span style='color:black'> - </span> with the black wire. </p>
+        </section>
+        <p id='score-1'> Score <p>
+        <section>
+          <img id='ardu-explanation' src='images/Ardu.png' onmouseover='bubble(this, "ardu-explanation");' onmouseout='bubble(this, "ardu-explanation-1");'>
+          <div>
+            <div id="red_div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="black_div" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+          </div>
+          <img id='bread-explanation' src='images/Bread.png'>
+        </section>
+          <div id="red_div_1"  ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img draggable="true" ondragstart="drag(event)" id="red_drag" src="images/Red_Wire.png">
+          </div>
+          <div id='black_div_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img draggable="true" ondragstart="drag(event)" id="black_drag" src="images/Black_Wire.png">
+          </div>
+        <section>
+          <img class='tutorial-img-size' id='momo' src='images/Explanation_Momo.png' onmouseover='bubble(this, "momo");' onmouseout='bubble(this, "momo-1");'>
+        </section>
+        <section>
+          <button id='ready-button-1' class='thin' onclick='slideFunction("third", "fourth");'> Correct! Go on! </button>
         </section>
       </div>
 
@@ -95,10 +115,31 @@
       <!-- //////////////// -->
 
       <div id='fourth'>
-        <p> connect leds to breadboard and arduino using cables </p>
-        <p> </p>
+        <h2> 3. Connect leds to breadboard and arduino </h2>
+        <p id='score-2'> Score </p>
         <section>
-          <button class='thin' onclick='slideFunction("fourth", "fifth");'> next </button>
+          <img id='ardu-fourth' src="images/Ardu.png">
+          <img id='red-fourth' src="images/Red_Wire.png">
+          <img id='bread-fourth' src="images/Bread.png">
+        </section>
+        <section>
+          <div id="green_div" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+          <div id="leds_div" ondrop="drop2(event)" ondragover="allowDrop2(event)"> </div>
+          <div id="blacks_div" ondrop="drop(event)" ondragover="allowDrop(event)"> </div>
+        </section>
+        <section id='dragimg'>
+          <div id='green_div_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img draggable="true" ondragstart="drag(event)" id="green_drag" src="images/Green_Wire.png">
+          </div>
+          <div id='blacks_div_1' ondrop="drop(event)" ondragover="allowDrop(event)">
+            <img draggable="true" ondragstart="drag(event)" id="blacks_drag" src="images/Black_Wire.png">
+          </div>
+          <div id='leds_div_1' ondrop="drop2(event)" ondragover="allowDrop2(event)">
+            <img draggable="true" ondragstart="drag2(event)" id="leds_drag" src="images/Leds.png">
+          </div>
+        </section>
+        <section>
+          <button id-='ready-button-2' class='thin' onclick='slideFunction("fourth", "fifth");'> next </button>
         </section>
       </div>
 
@@ -142,7 +183,12 @@
 
       <div id='about'>
         <h1> About </h1>
-        <p> a tutorial created for karkhana </p>
+        <p> Arantza, Laine and Mateo are students at New York University Abu Dhabi. They are taking a class Making Education, which is a part of the Interactive Media program at NYUAD and collaborates with an education company Karkhana, based in Kathmandu, Nepal. Karkhana’s vision is to create an environment that promotes self-directed and project-based learning to introduce children to technology through interactive workshops. Their principle “Think, Make, Play, Improve” is implemented in every aspect of their model, and corresponds to the Interactive Media program’s vision at NYUAD, making this collaboration a great opportunity for experiential learning for both sides. </p> </br>
+        <p> Arantza, Laine and Mateo are collaborating with Karkhana team members, Sujan and Hasin, to create supplementary material for Karkhana’s Innovation Club, which provides weekly interactive workshops for children. Their main goal was to create means for students to further expand their knowledge on Arduino and the components of the KIC kit and provide opportunity for learning outside Karkhana’s basecamp. They have designed a website with 3 workshops and 1 introductory tutorial with a focus on interactivity, independent learning and nudging to foster self-directed learning via exciting storylines. </p> <br>
+        <p> In February 2018, the team brainstormed the first ideas for such material that they would then introduce to Nepali children during their field-trip to Kathmandu, Nepal. They noticed that the existing video tutorials are not very kid-friendly and can often seem boring to children who are only beginning to learn about Arduino, technology and creative computing. To contribute to the tutorial community and target the teenage children, with focus on Karkhana’s students, they decided to create short and engaging videos with basic instructions, similar to Buzzfeed Tasty’s video productions. </p> <br>
+        <p> In March 2018, the team visited Kathmandu and Karkhana’s team and students to user-test their first tutorial - creating a traffic light to solve the traffic jam problems in Kathmandu. Although the children seemed to love certain aspects, such as the short duration and the exciting background music, everyone collaboratively agreed that there must be something more challenging and, therefore, more effective than making another set of video tutorials on YouTube. They decided to look into the branching options to make the tutorials more interactive, though recognized that it required a different platform, such as website. This, however, was not the first time that they considered creating a website, as they initially wanted to create a blog with their videos, where others could share their work. </p> <br>
+        <p> After testing out different ways to implement branching, such as Twine and video series, Arantza, Laine and Mateo agreed to create a javascript-based website with three tutorials that differ in the required knowledge about Arduino. But when they developed the first version, they realized that they had to introduce something that would connect each separate story. That’s how Momou, the happy momo dumpling, was created and he now follows the player throughout the stories. </p> <br>
+        <p> Now, users can choose between three storylines - Traffic Jam, Zombie Invasion, and Momosaur Attack. Go ahead and try one of them now! </p> 
         <section>
           <button class='thin' onclick='slideFunction("about", "this")'> close </button>
         </section>
@@ -181,9 +227,8 @@
     <script src="scripts/lib/p5.play.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
     <script src='scripts/script.js'></script>
-    <script src='scripts/traffic.js'></script>
-    <script src='scripts/materials.js'></script>
-
+    <script src='scripts/sketch-traffic.js'></script>
   </body>
 
 </html>
+
