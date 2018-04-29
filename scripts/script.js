@@ -90,29 +90,37 @@ myAudio.onpause = function(){
 };
 
 /*////////////////////////*/
+/*      CLICK SOUND      */
+/*////////////////////////*/
+
+function playClick() {
+    audio = new Audio('sound/click.mp3');
+    audio.play();
+}
+
+/*////////////////////////*/
 /*     MATERIAL CHECK     */
 /*////////////////////////*/
 
-var score = 0;
+var string;
+var total = 0;
 var movingOn = 0;
-var stringScore;
 
 function checkMaterial(isCorrect, buttonid) {
 
   if (isCorrect == 'yes'){
     document.getElementById(buttonid).style.backgroundColor = 'rgb(35, 128, 5)';
     movingOn = movingOn + 1;
-    score = score + 1;
-    stringScore = 'Correct!'
+    total = total + 1;
+    string = 'Correct! Your score is: ' + total;
   }
   if (isCorrect == 'no'){
     document.getElementById(buttonid).style.backgroundColor = 'rgb(155, 27, 0)';
-    score = score - 1;
-    stringScore = 'Incorrect! You dont need this material.'
+    total = total - 1;
+    string = 'Incorrect! You dont need this material. Your score is: ' + total;
   }
 
-  document.getElementById('score').innerHTML = stringScore;
-  // document.getElementById('score-1').innerHTML = 'Your score is ' + score;
+  document.getElementById('score').innerHTML = string;
 
   if (movingOn == 5){
     document.getElementById('ready-button').style.opacity = '1';
@@ -120,109 +128,50 @@ function checkMaterial(isCorrect, buttonid) {
 };
 
 /*////////////////////////*/
-/*       DRAG & DROP      */
+/*     CONECTION CHECK    */
 /*////////////////////////*/
 
-function allowDrop(ev) {
-    ev.preventDefault();
-}
+var movingOnString = 0;
+var connectionString;
 
-function drag(ev) {
-    ev.dataTransfer.setData("text", ev.target.id);
-}
+function checkMaterialConnection(connection) {
 
-function drop(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
+  if (connection == '5V'){
+    document.getElementById('5V-button').style.backgroundColor = 'rgb(35, 128, 5)';
+    document.getElementById('GND-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('+-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('--button').style.backgroundColor = 'rgb(255, 255, 255)';
+    movingOnString = movingOnString + 1;
+    connectionString = 'The 5V connection gives the circuit the necessary energy to work.'
+  }
+  if (connection == 'GND'){
+    document.getElementById('5V-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('GND-button').style.backgroundColor = 'rgb(35, 128, 5)';
+    document.getElementById('+-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('--button').style.backgroundColor = 'rgb(255, 255, 255)';
+    movingOnString = movingOnString + 1;
+    connectionString = 'The GND connection allows the energy to return to its original point and close the circuit.';
+  }
+  if (connection == '+'){
+    document.getElementById('5V-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('GND-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('+-button').style.backgroundColor = 'rgb(35, 128, 5)';
+    document.getElementById('--button').style.backgroundColor = 'rgb(255, 255, 255)';
+    movingOnString = movingOnString + 1;
+    connectionString = 'The 5V must be connected to a positive + hole of the breadboard.'
+  }
+  if (connection == '-'){
+    document.getElementById('5V-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('GND-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('+-button').style.backgroundColor = 'rgb(255, 255, 255)';
+    document.getElementById('--button').style.backgroundColor = 'rgb(35, 128, 5)';
+    movingOnString = movingOnString + 1;
+    connectionString = 'The GND must be connected to a negative - hole of the breadboard.';
+  }
 
-    if(ev.target.nodeName !== "IMG"){
-      ev.target.appendChild(document.getElementById(data));
-    }
+  document.getElementById('score-1').innerHTML = connectionString;
 
-    var red_drag = document.getElementById('red_drag');
-    var black_drag = document.getElementById('black_drag');
-
-    var correct_red_drop = document.getElementById('red_div').contains(red_drag);
-    var correct_black_drop = document.getElementById('black_div').contains(black_drag);
-
-    var incorrect_red_drop = document.getElementById('red_div').contains(black_drag);
-    var incorrect_black_drop = document.getElementById('black_div').contains(red_drag);
-
-    if (correct_red_drop){
-      document.getElementById("red_div").style.backgroundColor = 'green';
-    } else if (incorrect_red_drop){
-      document.getElementById("red_div").style.backgroundColor = 'red';
-    }
-
-    if (correct_black_drop){
-      document.getElementById("black_div").style.backgroundColor = 'green';
-    } else if (incorrect_black_drop){
-      document.getElementById("black_div").style.backgroundColor = 'red';
-    }
-
-    if (correct_red_drop && correct_black_drop){
-      document.getElementById('ready-button-1').style.display = 'block';
-      document.getElementById('ready-button-1').style.opacity = '1';
-    }
-    // document.getElementById('score-1').innerHTML = stringScore + ' Your score is ' + score;
-    // document.getElementById('score-2').innerHTML = 'Your score is ' + score;
-}
-
-function allowDrop2(ev) {
-    ev.preventDefault();
-}
-
-function drag2(ev){
-  ev.dataTransfer.setData("text", ev.target.id);
-}
-
-function drop2(ev) {
-    ev.preventDefault();
-    var data = ev.dataTransfer.getData("text");
-
-    if (ev.target.nodeName !== "IMG") {
-      ev.target.appendChild(document.getElementById(data));
-    }
-
-    var leds_drag = document.getElementById('leds_drag');
-    var blacks_drag = document.getElementById('blacks_drag');
-    var green_drag = document.getElementById('green_drag');
-
-    var correct_led_drop = document.getElementById('leds_div').contains(leds_drag);
-    var correct_blacks_drop = document.getElementById('blacks_div').contains(blacks_drag);
-    var correct_green_drop = document.getElementById('green_div').contains(green_drag);
-
-    if (document.getElementById('leds_div').contains(blacks_drag) || document.getElementById('leds_div').contains(green_drag)){
-      var incorrect_led_drop = document.getElementById('leds_div').contains(blacks_drag);
-    }
-    if (document.getElementById('blacks_div').contains(leds_drag) || document.getElementById('blacks_div').contains(green_drag)){
-      var incorrect_blacks_drop = document.getElementById('blacks_div').contains(leds_drag);
-    }
-    if (document.getElementById('green_div').contains(leds_drag) || document.getElementById('green_div').contains(blacks_drag)){
-      var incorrect_green_drop = document.getElementById('green_div').contains(leds_drag);
-    }
-
-    if (correct_led_drop){
-      document.getElementById("leds_div").style.backgroundColor = 'green';
-    } else if (incorrect_led_drop){
-      document.getElementById("leds_div").style.backgroundColor = 'red';
-    }
-
-    if (correct_blacks_drop){
-      document.getElementById("blacks_div").style.backgroundColor = 'green';
-    } else if (incorrect_blacks_drop){
-      document.getElementById("blacks_div").style.backgroundColor = 'red';
-    }
-
-    if (correct_green_drop){
-      document.getElementById("green_div").style.backgroundColor = 'green';
-    } else if (incorrect_green_drop){
-      document.getElementById("green_div").style.backgroundColor = 'red';
-    }
-
-    if (correct_led_drop && correct_blacks_drop && correct_green_drop){
-      document.getElementById('ready-button-2').style.opacity = '1';
-    }
-    // document.getElementById('score-2').innerHTML = stringScore + ' Your score is ' + score;
-    // document.getElementById('score-2').innerHTML = 'Your score is ' + score;
-}
+  if (movingOnString == 4){
+    document.getElementById('ready-button-1').style.opacity = '1';
+  }
+};
