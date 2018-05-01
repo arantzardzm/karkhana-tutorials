@@ -59,7 +59,7 @@
       <!-- //////////////// -->
 
       <div id='second'>
-        <h3> 1. Select the materials you will need! </h3>
+        <h3> Select the materials you will need! </h3>
         <p id='score'> Click the buttons! <p>
         <section>
           <button id='ardu-button' class='thin' onclick='checkMaterial("yes", "ardu-button"); playClick();'> Arduino <img src='images/Ardu.png'></button>
@@ -83,12 +83,13 @@
       <!-- //////////////// -->
 
       <div id='third'>
-        <h3> 2. Begin making connections on your Arduino </h3>
+        <h3> Connect your Arduino and Breadboard </h3>
+        <p> You will need: 1 arduino, 1 breadboard, 1 black wire and 1 red wire </p>
         <section>
           <button id='5V-button' class='thin' onclick='checkMaterialConnection("5V", "5V-button"); playClick();'> 5V Connection <img src='images/5Vpin.gif'></button>
           <button id='GND-button' class='thin' onclick='checkMaterialConnection("GND", "GND-button"); playClick();'> GND Connection <img src='images/GNDpin.gif'></button>
-          <button id='+-button' class='thin' onclick='checkMaterialConnection("+", "+-button"); playClick();'> + Connection <img src='images/Ardu.png'></button>
-          <button id='--button' class='thin' onclick='checkMaterialConnection("-", "--button"); playClick();'> - Connection <img src='images/Bread.png'></button>
+          <button id='--button' class='thin' onclick='checkMaterialConnection("-", "--button"); playClick();'> - Connection <img src='images/-.gif'></button>
+          <button id='+-button' class='thin' onclick='checkMaterialConnection("+", "+-button"); playClick();'> + Connection <img src='images/+.gif'></button>
         </section>
         <section>
           <p id='score-1'> Click on the buttons to learn more! </p>
@@ -103,9 +104,16 @@
       <!-- //////////////// -->
 
       <div id='fourth'>
-        <h2> 3. Connect leds to breadboard and arduino </h2>
+        <h2> Add resistors to your Breadboard </h2>
+        <p> You will need: 3 resistors </p>
         <section>
-          <button class='thin' onclick='slideFunction("fourth", "fifth"); playClick();'> Perfect! Keep going! </button>
+          <button id='breadResistor-button' class='thin' onclick='checkResistorConnection("breadResistor", "breadResistor-button"); playClick();'> <img src='images/breadResistors.gif'></button>
+        </section>
+        <section>
+          <p id='score-2'> Click on the button to learn more! </p>
+        </section>
+        <section>
+          <button id='ready-button-2' class='thin' onclick='slideFunction("fourth", "fifth"); playClick();'> resistors are set! </button>
         </section>
       </div>
 
@@ -114,24 +122,52 @@
       <!-- //////////////// -->
 
       <div id='fifth'>
-        <h2> 4. Add resitors to circuit </h2>
-        <p> </p>
+        <h2> Connect the LEDs to your Breadboard </h2>
+        <p> You will need: 3 LEDs </p>
         <section>
-          <button class='thin' onclick='slideFunction("fifth", "sixth"); playClick();'> next </button>
+          <button id='breadLeds-button' class='thin' onclick='checkLedsConnection("breadLeds", "breadLeds-button"); playClick();'> <img src='images/breadLEDs.gif'></button>
+        </section>
+        <section>
+          <p id='score-3'> Click on the button to learn more! </p>
+        </section>
+        <section>
+          <button id='ready-button-3' class='thin' onclick='slideFunction("fifth", "sixth"); playClick();'> perfect! we are almost done </button>
         </section>
       </div>
-
 
       <!-- //////////////// -->
       <!--       SIXTH      -->
       <!-- //////////////// -->
 
       <div id='sixth'>
-        <h2> 4. Write your code </h2>
-        <p> chose the one you think is correct </p>
-
+        <h2> Connect the LEDs to your Arduino </h2>
+        <p> You will need: 3 wires </p>
         <section>
-          <button class='thin' onclick='slideFunction("sixth", "conclusion"); playClick();'> next </button>
+          <button id='wireLeds-button' class='thin' onclick='checkWiresConnection("wireLeds", "wireLeds-button"); playClick();'>  <img src='images/breadWires.gif'></button>
+          <button id='11-button' class='thin' onclick='checkWiresConnection("11", "11-button"); playClick();'> <img src='images/11.gif'></button>
+        </section>
+        <section>
+          <p id='score-4'> Click on the buttons to learn more! </p>
+        </section>
+        <section>
+          <button id='ready-button-4' class='thin' onclick='slideFunction("sixth", "seventh"); playClick();'> last step! </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--       SIXTH      -->
+      <!-- //////////////// -->
+
+      <div id='seventh'>
+        <h2> Write the code </h2>
+        <p id='score-5'> Chose the pseudo code you think is correct </p>
+        <section>
+          <button id='pseudo-1-button' class='thin' onclick='checkPseudo("no", "pseudo-1-button"); playClick();'>  <img src='images/pseudo-1.png'></button>
+          <button id='pseudo-2-button' class='thin' onclick='checkPseudo("yes", "pseudo-2-button"); playClick();'> <img src='images/pseudo-2.png'></button>
+          <button id='pseudo-3-button' class='thin' onclick='checkPseudo("no", "pseudo-3-button"); playClick();'>  <img src='images/pseudo-3.png'></button>
+        </section>
+        <section>
+          <button id='ready-button-5' class='thin' onclick='slideFunction("seventh", "conclusion"); playClick();'> correct! </button>
         </section>
       </div>
 
@@ -142,6 +178,7 @@
       <div id='conclusion'>
         <p> Congratulations, you are done with your first circuit! </p>
         <p> Momou is incredibly grateful because you finally took him out of the traffic! </p>
+        <p id='finalscore'> Your final score is: </p>
       </div>
 
       <!-- //////////////// -->
