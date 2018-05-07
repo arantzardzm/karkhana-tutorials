@@ -1,17 +1,17 @@
 <html>
 
   <!-- //////////////////////// -->
-  <!--     TRAFFIC TUTORIAL     -->
+  <!--      ZOMBIE TUTORIAL     -->
   <!-- //////////////////////// -->
 
   <head>
 
-    <title> Traffic Tutorial </title>
+    <title> Zombie Tutorial </title>
     <link rel="stylesheet" href="styles/main-style.css">
     <link rel="stylesheet" href="styles/constant-style.css">
     <link rel="stylesheet" href="styles/introductory-style.css">
     <link rel="stylesheet" href="styles/tutorial-style.css">
-    <link rel="stylesheet" href="styles/traffic-style.css">
+    <link rel="stylesheet" href="styles/zombie-style.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 
   </head>
@@ -31,13 +31,13 @@
     <div id='sketch-holder'>
 
       <!-- //////////////// -->
-      <!--   TRAFFIC MAIN   -->
+      <!--   ZOMBIE MAIN    -->
       <!-- //////////////// -->
 
-      <div id='traffic-main'>
-        <h1> The Traffic Jam </h1>
+      <div id='zombie-main'>
+        <h1> The Zombie Attack </h1>
         <section>
-          <img onclick='slideFunction("traffic-main", "first"); playClick();' id='rarrow' src='images/right-arrow.png'>
+          <img onclick='slideFunction("zombie-main", "first"); playClick();' id='rarrow' src='images/right-arrow.png'>
         </section>
       </div>
 
@@ -46,11 +46,11 @@
       <!-- //////////////// -->
 
       <div id='first'>
-        <p> <span style='color:rgb(201,125,138);'>Momou</span> was riding his car to Karkhana yesterday to a very important meeting when he suddenly reached a crossroad with no policeman guiding the traffic.</p>
-        <p>It turns out the policeman had gotten flu and the whole area had become one big traffic jam! </p>
-        <p> Will you help end the traffic so <span style='color:rgb(201,125,138);'>Momou</span> can reach Karkhana on time? </p>
+        <p> <span style='color:rgb(201,125,138);'>Momou</span> was watching his favourite cartoon on the TV when a breaking news report started. Apparently a zombie escaped from the river bed and is out to turn others into zombies! </p>
+        <p> The problem is - he looks exactly like a human and can adapt its looks! He was last seen near the Karkhana office. </p>
+        <p> <span style='color:rgb(201,125,138);'>Momou</span> knows he has to find whether the zombie is hiding in Karkhana. He knows that zombies have colder body temperature than people, and the average body temperature for humans is 36.6C. </p>
         <section>
-          <button class='thin' onclick='slideFunction("first", "second"); playClick(); removeSketch();'> Let's create a traffic light! </button>
+          <button class='thin' onclick='slideFunction("first", "second"); playClick(); removeSketch();'> Let’s create a zombie detector! </button>
         </section>
       </div>
 
@@ -62,16 +62,16 @@
         <h3> Select the materials you will need! </h3>
         <p id='score'> Click the buttons! <p>
         <section>
-          <button id='ardu-button' class='thin' onclick='checkMaterial("yes", "ardu-button"); playClick();'> Arduino <img src='images/Ardu.png'></button>
-          <button id='temp-button' class='thin' onclick='checkMaterial("no", "temp-button"); playClick();'> Temp Sensor <img src='images/Temp.png'></button>
+          <button id='leds-button' class='thin' onclick='checkMaterial("yes", "leds-button"); playClick();'> LEDs <img src='images/Leds.png'></button>
+          <button id='temp-button' class='thin' onclick='checkMaterial("yes", "temp-button"); playClick();'> Temp Sensor <img src='images/Temp.png'></button>
+          <button id='momo-button' class='thin' onclick='checkMaterial("no", "momo-button"); playClick();'> Momou <img src='images/Momo.png'></button>
           <button id='resist-button' class='thin' onclick='checkMaterial("yes", "resist-button"); playClick();'> Resistor <img src='images/Resist.png'></button>
-          <button id='wires-button' class='thin' onclick='checkMaterial("yes", "wires-button"); playClick();'> Wires <img src='images/Red_Wire.png'></button>
         </section>
         <section>
+          <button id='wires-button' class='thin' onclick='checkMaterial("yes", "wires-button"); playClick();'> Wires <img src='images/Red_Wire.png'></button>
           <button id='photo-button' class='thin' onclick='checkMaterial("no", "photo-button"); playClick();'> Photoresistor <img src='images/Photo.png'></button>
-          <button id='leds-button' class='thin' onclick='checkMaterial("yes", "leds-button"); playClick();'> LEDs <img src='images/Leds.png'></button>
+          <button id='ardu-button' class='thin' onclick='checkMaterial("yes", "ardu-button"); playClick();'> Arduino <img src='images/Ardu.png'></button>
           <button id='bread-button' class='thin' onclick='checkMaterial("yes", "bread-button"); playClick();'> Breadboard <img src='images/Bread.png'></button>
-          <button id='momo-button' class='thin' onclick='checkMaterial("no", "momo-button"); playClick();'> Momou <img src='images/Momo.png'></button>
         </section>
         <section>
           <button id='ready-button' class='thin' onclick='slideFunction("second", "third"); playClick();'> all needed materials are collected! </button>
@@ -105,9 +105,9 @@
 
       <div id='fourth'>
         <h2> Add resistors to your Breadboard </h2>
-        <p> You will need: 3 resistors </p>
+        <p> You will need: 2 resistors </p>
         <section>
-          <button id='breadResistor-button' class='thin' onclick='checkResistorConnection("breadResistor", "breadResistor-button"); playClick();'> <img src='images/breadResistors.gif'></button>
+          <button id='breadResistor-button' class='thin' onclick='checkResistorConnection("breadResistor", "breadResistor-button"); playClick();'> <img src='images/breadResistors2.gif'></button>
         </section>
         <section>
           <p id='score-2'> Click on the button to learn more! </p>
@@ -122,16 +122,16 @@
       <!-- //////////////// -->
 
       <div id='fifth'>
-        <h2> Connect the LEDs to your Breadboard </h2>
-        <p> You will need: 3 LEDs </p>
+        <h2> Connect the Temperature sensor to your Breadboard </h2>
+        <p> You will need: 2 LEDs </p>
         <section>
-          <button id='breadLeds-button' class='thin' onclick='checkLedsConnection("breadLeds", "breadLeds-button"); playClick();'> <img src='images/breadLEDs.gif'></button>
+          <button id='breadLeds-button' class='thin' onclick='checkLedsConnection("breadLeds", "breadLeds-button"); playClick();'> <img src='images/breadLEDs2.gif'></button>
         </section>
         <section>
           <p id='score-3'> Click on the button to learn more! </p>
         </section>
         <section>
-          <button id='ready-button-3' class='thin' onclick='slideFunction("fifth", "sixth"); playClick();'> perfect! we are almost done </button>
+          <button id='ready-button-3' class='thin' onclick='slideFunction("fifth", "sixth"); playClick();'> perfect! go on </button>
         </section>
       </div>
 
@@ -140,17 +140,17 @@
       <!-- //////////////// -->
 
       <div id='sixth'>
-        <h2> Connect the LEDs to your Arduino </h2>
-        <p> You will need: 3 wires </p>
+        <h2> Connect the two LEDs to the circuit </h2>
+        <p> You will need: 2 wires </p>
         <section>
-          <button id='wireLeds-button' class='thin' onclick='checkWiresConnection("wireLeds", "wireLeds-button"); playClick();'>  <img src='images/breadWires.gif'></button>
-          <button id='11-button' class='thin' onclick='checkWiresConnection("11", "11-button"); playClick();'> <img src='images/11.gif'></button>
+          <button id='wireLeds-button' class='thin' onclick='checkWiresConnection("wireLeds", "wireLeds-button"); playClick();'>  <img src='images/breadWires2.gif'></button>
+          <button id='11-button' class='thin' onclick='checkWiresConnection("11", "11-button"); playClick();'> <img src='images/102.gif'></button>
         </section>
         <section>
           <p id='score-4'> Click on the buttons to learn more! </p>
         </section>
         <section>
-          <button id='ready-button-4' class='thin' onclick='slideFunction("sixth", "seventh"); playClick();'> last step! </button>
+          <button id='ready-button-4' class='thin' onclick='slideFunction("sixth", "seventh"); playClick();'> one more step! </button>
         </section>
       </div>
 
@@ -159,15 +159,34 @@
       <!-- //////////////// -->
 
       <div id='seventh'>
-        <h2> Write the code </h2>
-        <p id='score-5'> Chose the pseudo code you think is correct </p>
+        <h2> Add the temperature sensor </h2>
+        <p> You will need: 1 temp sensor and 3 wires</p>
+        <section>
+          <button id='breadtemp-button' class='thin' onclick='checkTempConnection("temp", "breadtemp-button"); playClick();'> <img src='images/tempSensor.gif'></button>
+          <button id='ao-button' class='thin' onclick='checkTempConnection("ao", "ao-button"); playClick();'> <img src='images/A0pin.gif'></button>
+        </section>
+        <section>
+          <p id='score-5'> Click on the buttons to learn more! </p>
+        </section>
+        <section>
+          <button id='ready-button-5' class='thin' onclick='slideFunction("seventh", "eight"); playClick();'> one more step! </button>
+        </section>
+      </div>
+
+      <!-- //////////////// -->
+      <!--      EIGHT       -->
+      <!-- //////////////// -->
+
+      <div id='eight'>
+        <h2> Write your code </h2>
+        <p id='score-6'> Chose the pseudo code you think is correct </p>
         <section>
           <button id='pseudo-1-button' class='thin' onclick='checkPseudo("no", "pseudo-1-button"); playClick();'>  <img src='images/pseudo-1.png'></button>
           <button id='pseudo-2-button' class='thin' onclick='checkPseudo("yes", "pseudo-2-button"); playClick();'> <img src='images/pseudo-2.png'></button>
           <button id='pseudo-3-button' class='thin' onclick='checkPseudo("no", "pseudo-3-button"); playClick();'>  <img src='images/pseudo-3.png'></button>
         </section>
         <section>
-          <button id='ready-button-5' class='thin' onclick='slideFunction("seventh", "conclusion"); playClick();'> correct! </button>
+          <button id='ready-button-6' class='thin' onclick='slideFunction("eight", "conclusion"); playClick();'> correct! </button>
         </section>
       </div>
 
@@ -176,8 +195,8 @@
       <!-- //////////////// -->
 
       <div id='conclusion'>
-        <p> Congratulations, you are done with your first circuit! </p>
-        <p> <span style='color:rgb(201,125,138);'>Momou</span> is incredibly grateful because you finally took him out of the traffic! </p>
+        <p> Congratulations, you are done with the zombie circuit! </p>
+        <p> Karkhana is grateful because you are going to be able to detect all zombie attacks from now on! </p>
         <p id='finalscore'> Your final score is: </p>
       </div>
 
@@ -234,8 +253,8 @@
     <script src="scripts/lib/p5.play.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.6/addons/p5.dom.js"></script>
     <script src='scripts/script.js'></script>
-    <script src='scripts/traffic.js'></script>
-    <script src='scripts/sketch-traffic.js'></script>
+    <script src='scripts/zombie.js'></script>
+    <script src='scripts/sketch.js'></script>
   </body>
 
 </html>

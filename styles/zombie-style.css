@@ -1,0 +1,208 @@
+/*////////////////////////*/
+/*   TRANSITION DISPLAY   */
+/*////////////////////////*/
+
+#first, #second, #third, #fourth, #fifth, #sixth, #seventh, #eight, #conclusion{
+  text-align: center;
+  opacity: 0;
+  display: none;
+}
+
+#ready-button, #ready-button-1, #ready-button-2, #ready-button-3, #ready-button-4, #ready-button-5, #ready-button-6{
+  opacity: 0;
+  display: none;
+}
+
+/*////////////////////////*/
+/*       ZOMBIE MAIN      */
+/*////////////////////////*/
+
+#zombie-main{
+  text-align: center;
+  opacity: 1;
+}
+
+/*////////////////////////*/
+/*          FIRST         */
+/*////////////////////////*/
+
+#first{
+  margin-top: -100px;
+}
+
+#first button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+  margin-top: -5px;
+}
+
+#first p{
+  font-size: 23px;
+}
+
+/*////////////////////////*/
+/*          SECOND        */
+/*////////////////////////*/
+
+#second button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 12px;
+}
+
+#second img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  animation: none !important;
+}
+
+#second p{
+  margin-top: -20px;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/*////////////////////////*/
+/*          THIRD         */
+/*////////////////////////*/
+
+#third button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 12px;
+}
+
+#third img{
+  display: block;
+  width: 200px;
+  height: 200px;
+  animation: none !important;
+}
+
+#third p{
+  font-size: 20px;
+}
+
+/*////////////////////////*/
+/*         FOURTH         */
+/*////////////////////////*/
+
+#fourth h2{
+  font-size: 30px;
+}
+
+#fourth p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#fourth img{
+  width: 300px;
+  height: 300px;
+  animation: none !important;
+}
+
+#fourth button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+}
+
+/*////////////////////////*/
+/*          FIFTH         */
+/*////////////////////////*/
+
+#fifth h2{
+  font-size: 30px;
+}
+
+#fifth p {
+  font-size: 20px;
+  margin-bottom: 10px;
+}
+
+#fifth img{
+  width: 300px;
+  height: 300px;
+  animation: none !important;
+}
+
+#fifth button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+}
+
+/*////////////////////////*/
+/*          SIXTH         */
+/*////////////////////////*/
+
+#sixth h2{
+  font-size: 30px;
+}
+
+#sixth p{
+  font-size: 20px;
+}
+
+#sixth img{
+  width: 250px;
+  height: 250px;
+  animation: none !important;
+}
+
+#sixth button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+}
+
+/*////////////////////////*/
+/*        SEVENTH         */
+/*////////////////////////*/
+
+#seventh h2{
+  font-size: 30px;
+}
+
+#seventh p{
+  font-size: 20px;
+}
+
+#seventh img{
+  width: 300px;
+  height: 300px;
+  animation: none !important;
+}
+
+#seventh button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+}
+
+/*////////////////////////*/
+/*          EIGHT         */
+/*////////////////////////*/
+
+#eight h2{
+  font-size: 30px;
+}
+
+#eight p{
+  font-size: 20px;
+}
+
+#eight img{
+  width: 300px;
+  height: 300px;
+  animation: none !important;
+}
+
+#eight button{
+  font-size: 16px;
+  padding: 12px 12px;
+  margin: 12px 16px;
+}
