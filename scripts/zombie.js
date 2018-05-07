@@ -90,7 +90,7 @@ function checkResistorConnection(resistor, button) {
   if (resistor == 'breadResistor'){
     document.getElementById(button).style.backgroundColor = 'rgb(35, 128, 5)';
     movingOnStringResistor = movingOnStringResistor + 1;
-    resistorString = 'The resistors limit the amount of current in the circuit! This keeps your components from overheating.';
+    resistorString = 'The resistors limit the amount of current in the circuit! This keeps your components from overheating. Make sure the resistor are connected to the - holes of the breadboard and to the center rows.';
   }
 
   document.getElementById('score-2').innerHTML = resistorString;
@@ -113,7 +113,7 @@ function checkLedsConnection(led, button) {
   if (led == 'breadLeds'){
     document.getElementById(button).style.backgroundColor = 'rgb(35, 128, 5)';
     movingOnStringLeds = movingOnStringLeds + 1;
-    ledsString = 'The LEDs will light up your circuit with their different colors!';
+    ledsString = 'The LEDs will light up your circuit with their different colors! Make sure the small leg of the LED is connected to the same row as the resistor, but in a different row than its long leg. The long leg recieves the + charge and the short let the - charge.';
   }
 
   document.getElementById('score-3').innerHTML = ledsString;
@@ -137,7 +137,7 @@ function checkWiresConnection(wires, button) {
     document.getElementById(button).style.backgroundColor = 'rgb(35, 128, 5)';
     document.getElementById('11-button').style.backgroundColor = 'rgb(255, 255, 255)';
     movingOnStringWires = movingOnStringWires + 1;
-    wiresString = 'These wires connect the breadboard to the Arduino';
+    wiresString = 'These wires connect the LEDs on the breadboard to the Arduino. Make sure the wires are connected to the same row as the long leg of the LED.';
   }
 
   if (wires == '11'){
@@ -169,7 +169,7 @@ function checkTempConnection(temp, button) {
     document.getElementById(button).style.backgroundColor = 'rgb(35, 128, 5)';
     document.getElementById('ao-button').style.backgroundColor = 'rgb(255, 255, 255)';
     movingOnStringTemp = movingOnStringTemp + 1;
-    tempString = 'These temperature sensor will allow you to detect the zombies!';
+    tempString = 'These temperature sensor will allow you to detect the zombies! The front of the sensor is the curve, make sure the left leg of the sensor is connected to -, the right leg of the sensor is connected to +, and the middle leg is connected to the A0 pin';
   }
 
   if (temp == 'ao'){
