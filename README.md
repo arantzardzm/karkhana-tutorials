@@ -21,3 +21,5 @@ How much of the support material will you create on your own and how much can be
 4. The theoretical readings you have done so far indicate that ability to learn in a social and connected setting is effective and natural.   
 
 5. What strategies will your design use to encourage students to collaborate, share and do peer support? How do you encourage students to document their work?
+
+Can be found at: http://air258.nyuad.im/karkhana-tutorials/
